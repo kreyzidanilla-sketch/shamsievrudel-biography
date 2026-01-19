@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шамсиев Рудель Ильфатович - Биография</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1541250623745-3e26f4e9c4bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c10b0b;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .photo-container {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #c10b0b;
+            box-shadow: 0 0 20px rgba(193, 11, 11, 0.5);
+            position: relative;
+        }
+        
+        #profilePhoto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .photo-upload-btn {
+            margin-top: 15px;
+            background-color: #c10b0b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .photo-upload-btn:hover {
+            background-color: #a00909;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #c10b0b;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background-color: #1a1a1a;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border-left: 4px solid #c10b0b;
+        }
+        
+        .card h2 {
+            color: #c10b0b;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 i {
+            font-size: 1.3rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 20px;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #c10b0b;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #c10b0b;
+        }
+        
+        .timeline-date {
+            color: #c10b0b;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-content {
+            background-color: #252525;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .tragic-story {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border-top: 4px solid #c10b0b;
+            border-bottom: 4px solid #c10b0b;
+        }
+        
+        .tragic-story h2 {
+            text-align: center;
+            color: #c10b0b;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .story-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #c10b0b;
+            font-weight: bold;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid #c10b0b;
+            background-color: #252525;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #111;
+            margin-top: 40px;
+            border-top: 2px solid #c10b0b;
+        }
+        
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .achievement {
+            background-color: #252525;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 150px;
+            border: 1px solid #c10b0b;
+        }
+        
+        .achievement i {
+            font-size: 2rem;
+            color: #c10b0b;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .photo-container {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .tragic-story, .card {
+                padding: 20px;
+            }
+        }
+        
+        #fileInput {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="photo-container">
+                    <div id="photoPlaceholder" class="photo-placeholder">
+                        <i class="fas fa-user-circle" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                        <span>Фото Шамсиева Р.И.</span>
+                    </div>
+                    <img id="profilePhoto" alt="Шамсиев Рудель Ильфатович" style="display: none;">
+                </div>
+                
+                <button class="photo-upload-btn" id="uploadButton">
+                    <i class="fas fa-upload"></i> Загрузить фото
+                </button>
+                <input type="file" id="fileInput" accept="image/*">
+                
+                <h1>Шамсиев Рудель Ильфатович</h1>
+                <div class="subtitle">Чемпион по боксу | Нефтекамск, Республика Башкортостан</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="info-grid">
+            <div class="card">
+                <h2><i class="fas fa-user"></i> Основная информация</h2>
+                <p><strong>Дата рождения:</strong> 25 мая 2006 года</p>
+                <p><strong>Место проживания:</strong> Республика Башкортостан, г. Нефтекамск</p>
+                <p><strong>Профессия:</strong> Профессиональный боксер</p>
+                <p><strong>Достижение:</strong> Чемпион региона по боксу</p>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-trophy"></i> Спортивные достижения</h2>
+                <div class="achievements">
+                    <div class="achievement">
+                        <i class="fas fa-medal"></i>
+                        <p>Чемпион РБ</p>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-award"></i>
+                        <p>Золотой призер</p>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-boxing-glove"></i>
+                        <p>15 побед</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-history"></i> Хронология пути</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">Первое знакомство с боксом в местной секции Нефтекамска</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">Первые серьезные тренировки и участие в городских соревнованиях</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">Трагическая потеря тренера в автокатастрофе. Принятие решения продолжать путь в его честь</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">Победа на региональном чемпионате Республики Башкортостан</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">Признание "Открытием года" в башкирском боксе</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tragic-story">
+            <h2><i class="fas fa-fire"></i> История восхождения</h2>
+            <div class="story-content">
+                <p>Мой путь в боксе начался с нуля. В 12 лет я пришел в скромный боксерский зал Нефтекамска, где меня встретил тренер <span class="highlight">Алексей Сергеевич Гордеев</span>. У нас не было современного оборудования, но было желание и вера.</p>
+                
+                <p>К 2020 году я уже показывал promising результаты на городских соревнованиях. Но настоящие испытания были впереди. <span class="highlight">В марте 2022 года</span> мой тренер, ставший мне вторым отцом, трагически погиб в автокатастрофе. Это был тяжелейший удар - я остался без наставника и почти потерял веру в себя.</p>
+                
+                <div class="quote">"Я продолжу твой путь, Алексей Сергеевич. Каждый удар на ринге будет в твою честь."</div>
+                
+                <p>Именно тогда я принял решение, которое изменило всё. Вместо того чтобы сдаться, я <span class="highlight">удвоил усилия</span>. Тренировался по 6 часов daily, изучал бои великих чемпионов, разрабатывал собственную тактику. Моей мотивацией была память о тренере.</p>
+                
+                <p>Год спустя, в 2023, я вышел на чемпионат Республики Башкортостан. Меня не считали фаворитом - слишком молод, слишком "зелен". Но я помнил каждое слово Алексея Сергеевича. Бой за чемпионский титул стал самым тяжелым в моей жизни - 10 раундов изнурительной борьбы. Когда рефери поднял мою руку, я понял, что это только начало.</p>
+                
+                <p>Сегодня я - чемпион, но знаю, что мой настоящий путь только начинается. Каждая тренировка - это диалог с памятью моего тренера. Каждая победа - доказательство, что даже из самой глубокой трагедии можно подняться к свету.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2024 Биография Шамсиева Руделя Ильфатовича</p>
+            <p>Сайт создан в память о пути от нуля к чемпионству</p>
+            <p style="margin-top: 15px; color: #aaa; font-size: 0.9rem;">
+                <i class="fas fa-map-marker-alt"></i> Нефтекамск, Республика Башкортостан
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('fileInput');
+            const uploadButton = document.getElementById('uploadButton');
+            const profilePhoto = document.getElementById('profilePhoto');
+            const photoPlaceholder = document.getElementById('photoPlaceholder');
+            
+            uploadButton.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            fileInput.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    const file = e.target.files[0];
+                    const reader = new FileReader();
+                    
+                    reader.onload = function(event) {
+                        profilePhoto.src = event.target.result;
+                        profilePhoto.style.display = 'block';
+                        photoPlaceholder.style.display = 'none';
+                    };
+                    
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Пример предзагрузки изображения (можно удалить, если будете загружать свое)
+            // Для использования просто удалите этот блок и загрузите свое фото через кнопку
+            const samplePhotoUrl = 'https://images.unsplash.com/photo-1621743370685-bb8f52b2c9ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+            const img = new Image();
+            img.onload = function() {
+                // Только для демонстрации - в реальном сайте удалите эти строки
+                console.log("Для загрузки своего фото нажмите кнопку 'Загрузить фото'");
+            };
+            img.src = samplePhotoUrl;
+        });
+    </script>
+</body>
+</html>
